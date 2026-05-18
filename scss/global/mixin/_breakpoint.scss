@@ -1,0 +1,12 @@
+@mixin tab {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+
+@mixin sp {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}

@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Blue Designのポートフォリオサイトです。誠実さと信頼感のあるWeb制作をお届けします。"
+    />
+    <title>Blue Design</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="home">
+    <!-- ローディングアニメーション -->
+    <div id="splash">
+      <div id="splash-logo">
+        <img src="img/logo.svg" alt="ロゴ画像" />
+      </div>
+    </div>
+
+    <div class="splashbg"></div>
+
+    <div id="container">
+      <!-- ヘッダー -->
+      <header class="header" id="header">
+        <div class="header-wrap">
+          <h1 class="header-wrap__ttl">
+            <a href="index.html"><img src="img/logo.svg" alt="ロゴマーク" /></a>
+          </h1>
+          <nav class="header-wrap__nav">
+            <ul class="header-wrap__list">
+              <li class="header-wrap__item">
+                <a href="about.html">私たちについて</a>
+              </li>
+              <li class="header-wrap__item">
+                <a href="service.html">サービス</a>
+                <!-- ドロップダウン -->
+                <ul class="header-nav-sub">
+                  <li class="header-nav-sub__item">
+                    <a href="service.html#hp-production">ホームページ制作</a>
+                  </li>
+                  <li class="header-nav-sub__item">
+                    <a href="service.html#support">運用サポート</a>
+                  </li>
+                  <li class="header-nav-sub__item">
+                    <a href="service.html#graphic">グラフィックデザイン</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header-wrap__item">
+                <a href="works.html">制作・導入実績</a>
+              </li>
+              <li class="header-wrap__item">
+                <a href="news.html">お知らせ</a>
+              </li>
+            </ul>
+
+            <div class="header-wrap__btn">
+              <a href="contact.html">お問い合わせ</a>
+            </div>
+          </nav>
+
+          <!-- ハンバーガーメニュー -->
+          <div class="toggle_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="fv" id="fv">
+          <div class="fv__inner">
+            <div class="fv__slider">
+              <div class="fv__img"></div>
+              <div class="fv__img"></div>
+              <div class="fv__img"></div>
+            </div>
+
+            <div class="fv__container">
+              <div class="fv__content">
+                <h2 class="fv__title">Design for your Value.</h2>
+                <p class="fv__text">
+                  お客様の「伝えたい」という純粋な想いを大切に、
+                </p>
+                <p class="fv__text">
+                  確かな技術で、ビジネスに心地よい変化と笑顔を。
+                </p>
+              </div>
+              <div class="fv__sns">
+                <div class="fv__sns-links">
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                  <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fa-brands fa-facebook"></i
+                  ></a>
+                  <a
+                    href="https://x.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                </div>
+                <span class="fv__copy">&copy; Blue Design Inc.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- concept -->
+        <section class="concept" id="concept">
+          <div class="concept__container">
+            <div class="concept__body">
+              <h3 class="concept__title">
+                想いをつなぎ、<br class="u-mobile" />確かなカタチを実現する。
+              </h3>
+              <p class="concept__text">
+                言葉にできない想いこそ、大切に伝えたい。<br />Blue
+                Designは、お客様のビジネスに誠実に向き合い、<br />共に未来を築くデザインパートナーを目指しています。
+              </p>
+            </div>
+
+            <div class="concept__btn-wrapper">
+              <a href="about.html" class="c-btn-solid">
+                Blue Designについて<span class="c-btn-solid__icon"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <div class="c-visual-parallax"></div>
+
+        <!-- service -->
+        <section class="service" id="service">
+          <div class="service__inner">
+            <div class="c-section-header">
+              <span class="c-section-header__en">Service</span>
+              <h4 class="c-section-header__title">サービス</h4>
+            </div>
+
+            <div class="service__items">
+              <article class="service-item">
+                <div class="service-item__img-wrapper">
+                  <img
+                    src="img/topservice01.jpg"
+                    alt="ノートパソコンを操作する手元の様子"
+                    class="service-item__img"
+                  />
+                </div>
+                <div class="service-item__body">
+                  <span class="service-item__num">01</span>
+                  <h5 class="service-item__title">
+                    想いに寄り添い<br />価値をカタチにする「ホームページ制作」
+                  </h5>
+                  <p class="service-item__text">
+                    制作の目的や解決したい課題を丁寧にお伺いし、事業の背景まで深く理解した上でデザインに落とし込みます。単に見た目が美しいだけでなく、「誰に、何を伝えたいのか」という本質を捉えた、心に届くWebサイトをご提案します。
+                  </p>
+                  <div class="service-item__btn-wrapper">
+                    <a href="service.html#hp-production" class="c-btn-accent"
+                      >ホームページ制作について<span class="c-btn-accent__icon"
+                        ><i class="fa-solid fa-arrow-right"></i></span
+                    ></a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="service-item">
+                <div class="service-item__img-wrapper">
+                  <img
+                    src="img/topservice02.jpg"
+                    alt="ノートパソコンの画面を指差しあう様子"
+                    class="service-item__img"
+                  />
+                </div>
+                <div class="service-item__body">
+                  <span class="service-item__num">02</span>
+                  <h5 class="service-item__title">
+                    公開後も共に歩む、<br />安心の「運用サポート」
+                  </h5>
+                  <p class="service-item__text">
+                    ドメイン・サーバーの管理から、WordPressの更新方法、軽微な修正まで、Webの知識に不安がある方でも迷わないよう丁寧にバックアップします。お客様のビジネスの成長に合わせて、長く愛されるサイトへと共に育てていくパートナーであり続けます。
+                  </p>
+                  <div class="service-item__btn-wrapper">
+                    <a href="service.html#support" class="c-btn-accent">
+                      運用サポートについて<span class="c-btn-accent__icon"
+                        ><i class="fa-solid fa-arrow-right"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="service-item">
+                <div class="service-item__img-wrapper">
+                  <img
+                    src="img/topservice03.jpg"
+                    alt="液晶タブレットでペンを持ってデザインする様子"
+                    class="service-item__img"
+                  />
+                </div>
+                <div class="service-item__body">
+                  <span class="service-item__num">03</span>
+                  <h5 class="service-item__title">
+                    細部にまでこだわった<br />伝わる「グラフィックデザイン」
+                  </h5>
+                  <p class="service-item__text">
+                    ロゴや名刺、パンフレットといった手に触れるツールは、企業やサービスの「顔」となります。Webサイトの世界観と一貫性を持たせ、目的や使用シーンを深く考慮した、長く愛され、確かな信頼を伝えるデザインをご提案します。
+                  </p>
+                  <div class="service-item__btn-wrapper">
+                    <a href="service.html#graphic" class="c-btn-accent">
+                      グラフィックデザインについて<span
+                        class="c-btn-accent__icon"
+                        ><i class="fa-solid fa-arrow-right"></i
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="service__flow-block flow">
+              <div class="c-section-header c-section-header--center">
+                <h4 class="c-section-header__title">制作の流れ</h4>
+              </div>
+
+              <ol class="flow__list">
+                <li class="flow-step">
+                  <div class="flow-step__head">
+                    <span class="flow-step__num">01.</span>
+                    <span class="flow-step__name">お問い合わせ</span>
+                  </div>
+                  <p class="flow-step__text">
+                    まずはお気軽にご連絡ください。「まだ考えがまとまっていない」という段階でのご相談も、どんなご相談も大歓迎です。
+                  </p>
+                </li>
+                <li class="flow-step">
+                  <div class="flow-step__head">
+                    <span class="flow-step__num">02.</span>
+                    <span class="flow-step__name">ヒアリング</span>
+                  </div>
+                  <p class="flow-step__text">
+                    対話を通じて、目的や今抱えているお悩みを丁寧に整理していきます。オンラインまたは対面にてお話を伺います。
+                  </p>
+                </li>
+                <li class="flow-step">
+                  <div class="flow-step__head">
+                    <span class="flow-step__num">03.</span>
+                    <span class="flow-step__name">ご提案とお見積もり</span>
+                  </div>
+                  <p class="flow-step__text">
+                    伺った内容をもとに、制作・運用の進め方や概算の費用をご提案します。納得いただける形を一緒に探ります。
+                  </p>
+                </li>
+                <li class="flow-step">
+                  <div class="flow-step__head">
+                    <span class="flow-step__num">04.</span>
+                    <span class="flow-step__name">構成とデザイン</span>
+                  </div>
+                  <p class="flow-step__text">
+                    サイトの役割や情報の優先順位を整理し、土台を作ります。文章の準備や表現の調整も、寄り添いながらお手伝いします。
+                  </p>
+                </li>
+              </ol>
+            </div>
+
+            <div class="service__btn-wrapper">
+              <a href="service.html" class="c-btn-solid">
+                サービス一覧を見る<span class="c-btn-solid__icon"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- works -->
+        <section class="works" id="works">
+          <div class="works__inner">
+            <div class="c-section-header">
+              <span class="c-section-header__en">Works</span>
+              <h4 class="c-section-header__title">制作・運用実績</h4>
+            </div>
+
+            <div class="works__category">
+              <h5 class="works__category-title">ホームページ制作</h5>
+
+              <div class="works__items">
+                <div class="works-item">
+                  <a href="#" class="works-item__link">
+                    <div class="works-item__content -mask-from-top">
+                      <div class="works-item__img-wrapper">
+                        <img
+                          src="img/hp01.jpg"
+                          alt="株式会社テスト様 コーポレートサイト"
+                          class="works-item__img"
+                        />
+                      </div>
+                      <div class="works-item__mask">
+                        <div class="works-item__mask-text">
+                          <span class="works-item__company-name"
+                            >株式会社テスト様</span
+                          >
+                          <span class="works-item__site-type"
+                            >コーポレートサイト</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <p class="works-item__text">
+                      株式会社テスト様 コーポレートサイト
+                    </p>
+                  </a>
+                </div>
+
+                <div class="works-item">
+                  <a href="#" class="works-item__link">
+                    <div class="works-item__content -mask-from-top">
+                      <div class="works-item__img-wrapper">
+                        <img
+                          src="img/hp02.jpg"
+                          alt="テスト株式会社様 オンラインショップ"
+                          class="works-item__img"
+                        />
+                      </div>
+                      <div class="works-item__mask">
+                        <div class="works-item__mask-text">
+                          <span class="works-item__company-name"
+                            >テスト株式会社様</span
+                          >
+                          <span class="works-item__site-type"
+                            >オンラインショップ</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <p class="works-item__text">
+                      テスト株式会社様 オンラインショップ
+                    </p>
+                  </a>
+                </div>
+
+                <div class="works-item">
+                  <a href="#" class="works-item__link">
+                    <div class="works-item__content -mask-from-top">
+                      <div class="works-item__img-wrapper">
+                        <img
+                          src="img/hp03.jpg"
+                          alt="株式会社TEST様 採用求人サイト"
+                          class="works-item__img"
+                        />
+                      </div>
+                      <div class="works-item__mask">
+                        <div class="works-item__mask-text">
+                          <span class="works-item__company-name"
+                            >株式会社TEST様</span
+                          >
+                          <span class="works-item__site-type"
+                            >採用求人サイト</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <p class="works-item__text">
+                      株式会社TEST様 採用求人サイト
+                    </p>
+                  </a>
+                </div>
+              </div>
+
+              <div class="works__btn-wrapper">
+                <a href="works.html?filter=hp" class="c-btn-accent">
+                  制作実績を見る
+                  <span class="c-btn-accent__icon"
+                    ><i class="fa-solid fa-arrow-right"></i
+                  ></span>
+                </a>
+              </div>
+            </div>
+
+            <hr class="works__divider" />
+
+            <div class="works__category">
+              <h5 class="works__category-title">運用サポート</h5>
+
+              <div class="works__items">
+                <div class="works-item">
+                  <a href="#" class="works-item__link">
+                    <div class="works-item__content -mask-from-top">
+                      <div class="works-item__img-wrapper">
+                        <img
+                          src="img/support01.jpg"
+                          alt="ひまわり会計事務所様 更新サポート"
+                          class="works-item__img"
+                        />
+                      </div>
+                      <div class="works-item__mask">
+                        <div class="works-item__mask-text">
+                          <span class="works-item__company-name"
+                            >ひまわり会計事務所様</span
+                          >
+                          <span class="works-item__site-type"
+                            >更新サポート</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <p class="works-item__text">
+                      ひまわり会計事務所様 更新サポート
+                    </p>
+                  </a>
+                </div>
+
+                <div class="works-item">
+                  <a href="#" class="works-item__link">
+                    <div class="works-item__content -mask-from-top">
+                      <div class="works-item__img-wrapper">
+                        <img
+                          src="img/support02.jpg"
+                          alt="一般社団法人T様 定期メンテナンス"
+                          class="works-item__img"
+                        />
+                      </div>
+                      <div class="works-item__mask">
+                        <div class="works-item__mask-text">
+                          <span class="works-item__company-name"
+                            >一般社団法人T様</span
+                          >
+                          <span class="works-item__site-type"
+                            >定期メンテナンス</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <p class="works-item__text">
+                      一般社団法人T様 定期メンテナンス
+                    </p>
+                  </a>
+                </div>
+
+                <div class="works-item">
+                  <a href="#" class="works-item__link">
+                    <div class="works-item__content -mask-from-top">
+                      <div class="works-item__img-wrapper">
+                        <img
+                          src="img/support03.jpg"
+                          alt="テストクリニック様 更新サポート"
+                          class="works-item__img"
+                        />
+                      </div>
+                      <div class="works-item__mask">
+                        <div class="works-item__mask-text">
+                          <span class="works-item__company-name"
+                            >テストクリニック様</span
+                          >
+                          <span class="works-item__site-type"
+                            >更新サポート</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <p class="works-item__text">
+                      テストクリニック様 更新サポート
+                    </p>
+                  </a>
+                </div>
+              </div>
+
+              <div class="works__btn-wrapper">
+                <a href="works.html?filter=support" class="c-btn-accent">
+                  運用実績を見る
+                  <span class="c-btn-accent__icon"
+                    ><i class="fa-solid fa-arrow-right"></i
+                  ></span>
+                </a>
+              </div>
+            </div>
+
+            <hr class="works__divider" />
+
+            <div class="works__category">
+              <h5 class="works__category-title">グラフィックデザイン</h5>
+
+              <div class="works__items">
+                <div class="works-item">
+                  <a href="#" class="works-item__link">
+                    <div class="works-item__content -mask-from-top">
+                      <div class="works-item__img-wrapper">
+                        <img
+                          src="img/design01.jpg"
+                          alt="カフェフラワー様 ショップカード制作"
+                          class="works-item__img"
+                        />
+                      </div>
+                      <div class="works-item__mask">
+                        <div class="works-item__mask-text">
+                          <span class="works-item__company-name"
+                            >カフェフラワー様</span
+                          >
+                          <span class="works-item__site-type"
+                            >ショップカード制作</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <p class="works-item__text">
+                      カフェフラワー様 ショップカード制作
+                    </p>
+                  </a>
+                </div>
+
+                <div class="works-item">
+                  <a href="#" class="works-item__link">
+                    <div class="works-item__content -mask-from-top">
+                      <div class="works-item__img-wrapper">
+                        <img
+                          src="img/design02.jpg"
+                          alt="株式会社テスト不動産様 名刺デザイン"
+                          class="works-item__img"
+                        />
+                      </div>
+                      <div class="works-item__mask">
+                        <div class="works-item__mask-text">
+                          <span class="works-item__company-name"
+                            >株式会社テスト不動産様</span
+                          >
+                          <span class="works-item__site-type"
+                            >名刺デザイン</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <p class="works-item__text">
+                      株式会社テスト不動産様 名刺デザイン
+                    </p>
+                  </a>
+                </div>
+
+                <div class="works-item">
+                  <a href="#" class="works-item__link">
+                    <div class="works-item__content -mask-from-top">
+                      <div class="works-item__img-wrapper">
+                        <img
+                          src="img/design03.jpg"
+                          alt="喫茶あさがお様 ロゴ・メニュー表制作"
+                          class="works-item__img"
+                        />
+                      </div>
+                      <div class="works-item__mask">
+                        <div class="works-item__mask-text">
+                          <span class="works-item__company-name"
+                            >喫茶あさがお様</span
+                          >
+                          <span class="works-item__site-type"
+                            >ロゴ・メニュー表制作</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <p class="works-item__text">
+                      喫茶あさがお様 ロゴ・メニュー表制作
+                    </p>
+                  </a>
+                </div>
+              </div>
+
+              <div class="works__btn-wrapper">
+                <a href="works.html?filter=graphic" class="c-btn-accent">
+                  制作実績を見る
+                  <span class="c-btn-accent__icon"
+                    ><i class="fa-solid fa-arrow-right"></i
+                  ></span>
+                </a>
+              </div>
+            </div>
+
+            <div class="works__bottom-btn-wrapper">
+              <a href="works.html" class="c-btn-solid">
+                制作・運用実績一覧を見る
+                <span class="c-btn-solid__icon"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="news" id="news">
+          <div class="news__inner">
+            <div class="c-section-header">
+              <span class="c-section-header__en">News</span>
+              <h4 class="c-section-header__title">お知らせ</h4>
+            </div>
+
+            <div class="news__list">
+              <article class="news-item">
+                <a href="single.html" class="news-item__link">
+                  <div class="news-item__meta">
+                    <time datetime="2026-05-02" class="news-item__date"
+                      >2026-05-02</time
+                    >
+                    <span class="news-item__category">#トピックス</span>
+                  </div>
+                  <h5 class="news-item__title">
+                    ゴールデンウィークの営業について
+                  </h5>
+                </a>
+              </article>
+
+              <article class="news-item">
+                <a href="single.html" class="news-item__link">
+                  <div class="news-item__meta">
+                    <time datetime="2026-04-10" class="news-item__date"
+                      >2026-04-10</time
+                    >
+                    <span class="news-item__category">#メディア</span>
+                  </div>
+                  <h5 class="news-item__title">
+                    地域情報誌「情報タイムズ」に掲載されました
+                  </h5>
+                </a>
+              </article>
+
+              <article class="news-item">
+                <a href="single.html" class="news-item__link">
+                  <div class="news-item__meta">
+                    <time datetime="2026-04-01" class="news-item__date"
+                      >2026-04-01</time
+                    >
+                    <span class="news-item__category">#トピックス</span>
+                  </div>
+                  <h5 class="news-item__title">
+                    サイトのリニューアルを行いました
+                  </h5>
+                </a>
+              </article>
+            </div>
+
+            <div class="news__btn-wrapper">
+              <a href="news.html" class="c-btn-solid">
+                お知らせ一覧を見る
+                <span class="c-btn-solid__icon"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <div class="news__parallax"></div>
+
+        <section class="contact" id="contact">
+          <div class="contact__inner">
+            <div class="contact__box">
+              <span class="contact__en">Contact</span>
+              <h4 class="contact__title">お問い合わせ</h4>
+              <p class="contact__text">
+                お仕事のご相談・ご質問など<br />
+                何でもお気軽にお問い合わせください
+              </p>
+            </div>
+
+            <div class="contact__buttons">
+              <a href="tel:000-0000-0000" class="c-btn-contact -phone">
+                <span class="c-btn-contact__icon"
+                  ><i class="fa-solid fa-phone"></i
+                ></span>
+                000-0000-0000
+              </a>
+
+              <a href="contact.html" class="c-btn-contact -form">
+                <span class="c-btn-contact__icon"
+                  ><i class="fa-solid fa-paper-plane"></i
+                ></span>
+                お問い合わせフォーム
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="footer__content">
+            <div class="footer__info">
+              <div class="footer__logo">
+                <a href="index.html"
+                  ><img src="img/logo.svg" alt="Blue Design"
+                /></a>
+              </div>
+              <address class="footer__address">
+                〒000-0000<br />
+                福岡県福岡市123番地45 福岡ビルディング502
+              </address>
+              <p class="footer__tel">TEL:000-0000-0000</p>
+
+              <div class="footer__sns">
+                <a
+                  href="https://www.instagram.com/"
+                  class="footer__sns-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a
+                  href="https://www.facebook.com/"
+                  class="footer__sns-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-square-facebook"></i>
+                </a>
+
+                <a
+                  href="https://x.com/"
+                  class="footer__sns-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="footer__nav-wrapper">
+              <div class="footer__nav-lists">
+                <ul class="footer__nav-list">
+                  <li><a href="service.html">サービス</a></li>
+                  <li>
+                    <a href="service.html#hp-production">・ホームページ制作</a>
+                  </li>
+                  <li><a href="service.html#support">・運用サポート</a></li>
+                  <li>
+                    <a href="service.html#graphic">・グラフィックデザイン</a>
+                  </li>
+                </ul>
+                <ul class="footer__nav-list">
+                  <li><a href="about.html">私たちについて</a></li>
+                  <li><a href="works.html">制作・導入実績</a></li>
+                  <li><a href="news.html">お知らせ</a></li>
+                </ul>
+              </div>
+
+              <div class="footer__btn-wrapper">
+                <a href="contact.html" class="c-btn-footer"
+                  >お問い合わせフォーム</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__copyright">
+          <small>&copy; Blue Design.Inc</small>
+        </div>
+      </footer>
+
+      <div id="js-page-top" class="c-page-top">
+        <a href="#" class="c-page-top__link">
+          <span class="c-page-top__arrow"
+            ><i class="fa-solid fa-arrow-up"></i
+          ></span>
+          <span class="c-page-top__text">page top</span>
+        </a>
+      </div>
+    </div>
+    <!-- /#container -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

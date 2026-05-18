@@ -1,0 +1,506 @@
+@use "../global" as *;
+
+.sub-fv {
+  width: 100%;
+
+// 下層ページfv共通
+  &__bg {
+    width: 100%;
+    height: 50rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  
+    &--about {
+      background-image: url("../img/aboutusfv.jpg"); 
+    }
+
+    &--service {
+      background-image: url("../img/servicefv.jpg"); 
+    }
+
+    &--works {
+      background-image: url("../img/worksfv.jpg"); 
+    }
+
+    &--news {
+      background-image: url("../img/newsfv.jpg"); 
+    }
+
+    &--contact {
+      background-image: url("../img/contactfv.jpg"); 
+    }
+
+  }
+
+
+  &__inner {
+    padding-inline: $padding;
+  }
+
+  &__title-box {
+    background-color: #fff;
+    width: 31.25rem;
+    height: 12.5rem;
+    justify-content: center;
+    border-radius: 6.25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    @include tab {
+      width: 18.75rem;
+      height: 9.375rem;
+    }
+  }
+
+
+  &__en {
+    font-size: 1.5rem; 
+    font-weight: $weight-bold;
+    color: $color-sub;
+    font-family: $font-accent;
+    letter-spacing: 0.05em;
+
+    @include tab {
+      font-size: 1.25rem;
+    }
+  }
+
+  
+  &__ja {
+    font-size: 2rem; 
+    font-weight: $weight-bold;
+    color: $color-text;
+
+    @include tab {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__breadcrumb {
+    width: 100%;
+    background-color: #fff; 
+    padding-block: 1rem;
+
+    &-inner {
+      max-width: $layout-inner;
+      width: 100%;
+      margin-inline: auto;
+      padding-inline: $padding;
+      font-size: 1rem;
+      color: $color-text;
+      text-align: right; 
+
+      a {
+        color: $color-text;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $color-main;
+        }
+      }
+
+      span {
+        color: $color-text;
+      }
+    }
+  }
+}
+
+
+.about-heading {
+  font-size: 2rem;
+  font-weight: $weight-bold;
+  color: $color-text;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  white-space: nowrap;
+
+  &::after {
+    content: "";
+    flex-grow: 1;
+    height: 0.0625rem;
+    background-color: $color-main;
+  }
+
+  @include tab {
+    font-size: 1.5rem;
+    gap: 1rem;
+  }
+}
+
+
+.about-message {
+  padding-block: 10rem 0;
+
+  @include tab {
+    padding-block: 7.5rem 0;
+  }
+
+  &__inner {
+    max-width: $layout-inner;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: $padding;
+  }
+
+  &__text-box {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: $color-text;
+    margin-top: 4rem;
+
+    p + p {
+      margin-top: 1.5rem;
+    }
+
+    @include tab {
+      font-size: 1rem;
+    }
+  }
+}
+
+
+.about-slider {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 4rem;
+
+  &__track {
+    display: flex;
+    width: 200rem;
+    gap: 1.25rem;
+    animation: infinity-loop 50s linear infinite; 
+  }
+
+  &__item {
+    width: 18.75rem;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      border-radius: 0.625rem;
+    }
+
+    @include tab {
+      width: 12.5rem;
+    }
+  }
+}
+
+@keyframes infinity-loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 0.625rem));
+  }
+}
+
+.about-features {
+  padding-block: 10rem; 
+
+  @include tab {
+    padding-block: 7.5rem;
+  }
+
+  
+  &__inner {
+    max-width: $layout-inner;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: $padding;
+  }
+
+  
+  &__intro {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: $color-text;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+
+    p + p {
+      margin-top: 0.5rem;
+    }
+
+    @include tab {
+      font-size: 0.875rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  
+  &__cards {
+    display: flex;
+    gap: 1.5rem;
+
+    @include tab {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+
+  &__card {
+    flex: 1;
+    background-color: #fff;
+    border: 0.0625rem solid $color-accent-80;
+    border-radius: 0.625rem;
+    padding: 3rem 1rem 1rem;
+    text-align: center;
+    position: relative;
+
+    @include tab {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    
+    &-num {
+      position: absolute;
+      top: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.125rem;
+      font-weight: $weight-bold;
+      color: $color-text;
+      font-family: $font-accent;
+    }
+
+    
+    &-icon {
+      width: 3.5rem;
+      height: 3.5rem;
+      background-color: $color-accent-80;
+      color: #fff;
+      border-radius: 0.625rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-inline: auto;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    
+    &-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: $color-text;
+      margin-bottom: 1rem;
+      
+      
+      &::after {
+        content: "";
+        display: block;
+        width: 6rem;
+        height: 0.125rem;
+        background-color: $color-accent-80;
+        margin: 0.5rem auto 0;
+      }
+    }
+
+    &-text {
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: $color-text;
+      text-align: left;
+    }
+  }
+}
+
+
+
+.about-history {
+  margin-bottom: 10rem;
+  background-color: #fff;
+
+  @include tab {
+    margin-bottom: 7.5rem;
+  }
+
+  
+  &__inner {
+    max-width: $layout-inner;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: $padding;
+  }
+
+
+  &__table-wrapper {
+    max-width: $layout-inner-narrow;
+    width: 100%;
+    margin-inline: auto; 
+    margin-top: 7.5rem;
+
+    @include tab {
+      margin-top: 5rem;
+    }
+  }
+
+
+  &__list {
+    width: 100%;
+  }
+
+  
+  &__row {
+    display: flex;
+    align-items: baseline; 
+    padding-block: 1.5rem; 
+    border-bottom: 0.0625rem dotted $color-text;
+
+    @include tab {
+      flex-direction: column; 
+      gap: 0.5rem;
+      padding-block: 1rem;
+    }
+  }
+
+  
+  &__term {
+    width: 12.5rem;
+    font-size: 1rem;
+    color: $color-text;
+    flex-shrink: 0; 
+
+    @include tab {
+      width: 100%;
+      font-size: 0.875rem;
+    }
+  }
+
+  
+  &__description {
+    font-size: 1rem;
+    color: $color-text;
+    line-height: 1.6;
+
+    @include tab {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+
+
+.about-access {
+  background-color: #fff;
+
+  &__inner {
+    max-width: $layout-inner;
+    width: 100%;
+    margin-inline: auto; 
+    padding-inline: $padding;
+  }
+
+
+  &__map {
+    width: 100%;
+    margin-top: 7.5rem;
+    margin-bottom: 2rem;
+    aspect-ratio: 16 / 9;
+    max-height: 28.125rem;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include tab {
+      margin-block: 2.5rem;
+      aspect-ratio: 4 / 3;
+    }
+  }
+
+
+  &__info {
+    width: 100%;
+    color: $color-text;
+  }
+
+  &__company {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+
+
+  &__address {
+    font-size: 1rem;
+    margin-bottom: 4rem;
+
+    @include tab {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__routes {
+    display: flex;
+    gap: 3.5rem;
+
+    @include tab {
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+  }
+
+
+  &__route {
+    flex: 1; 
+
+    
+    &-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem; 
+      margin-bottom: 1.25rem; 
+    }
+
+  
+    &-icon {
+      width: 3rem; 
+      height: 3rem; 
+      color: #fff; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0; 
+      background-color: $color-main; 
+      border-radius: 0.625rem; 
+      font-size: 1.5rem;
+
+      @include tab {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+      }
+    }
+
+    &-title {
+      font-size: 1.125rem; 
+      font-weight: $weight-bold;
+      color: $color-text;
+    }
+
+    &-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: $color-text;
+    }
+  }
+}

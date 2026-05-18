@@ -1,0 +1,1336 @@
+@use "../global" as *;
+
+// ==========================================================================
+// ローディングアニメーション
+// ==========================================================================
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 9999999;
+  text-align: center;
+
+  &-logo {
+    position: absolute;
+    top: calc(50% - 3.125rem); 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12.5rem;
+    
+    @include tab {
+      width: 9.375rem;
+      top: calc(50% - 2.5rem); 
+    }
+
+    img {
+      @include img;
+    }
+  }
+}
+
+.splashbg {
+  display: none;
+  content: "";
+  position: fixed;
+  z-index: 999999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  background-color: $color-main;
+
+  @keyframes PageAnime {
+    0% { transform-origin: left; transform: scaleX(0); }
+    50% { transform-origin: left; transform: scaleX(1); }
+    50.001% { transform-origin: right; }
+    100% { transform-origin: right; transform: scaleX(0); }
+  }
+}
+
+body.home {
+  #container {
+    opacity: 0; 
+  }
+
+  &.appear {
+    .splashbg {
+      display: block;
+      animation: PageAnime 1.2s ease-in-out forwards;
+    }
+
+    #container {
+      animation: PageAnimeAppear 1s 0.8s forwards;
+
+      @keyframes PageAnimeAppear {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+    }
+  }
+}
+
+
+.fv {
+  width: 100%;
+  height: calc(100vh - 6.25rem);
+  margin-top: 6.25rem;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+
+  @include tab {
+    height: auto;
+    min-height: calc(100vh - 6.25rem);
+  }
+
+  &__inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden; 
+    border-radius: 5rem 0 5rem 0;
+
+    @include tab {
+      border-radius: 0;
+      min-height: calc(100vh - 6.25rem);
+    }
+  }
+
+  &__slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: zoomOutSlider 15s infinite;
+
+    &:nth-child(1) { background-image: url('../img/fv01.jpg'); animation-delay: 0s; }
+    &:nth-child(2) { background-image: url('../img/para01.jpg'); animation-delay: 5s; }
+    &:nth-child(3) { background-image: url('../img/para02.jpg'); animation-delay: 10s; }
+
+    @keyframes zoomOutSlider {
+      0% { transform: scale(1.15); opacity: 0; }
+      8% { opacity: 1; }
+      30% { opacity: 1; }
+      38% { transform: scale(1); opacity: 0; }
+      100% { opacity: 0; }
+    }
+  }
+
+  
+  &__container {
+    max-width: $layout-header; 
+    width: 100%;
+    margin-inline: auto;     
+    padding-inline: $padding;
+    position: absolute; 
+    bottom: 0;        
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    pointer-events: none;    
+    @include flex(space-between); 
+    align-items: flex-end;
+
+  
+    @include tab {
+      max-width: 100%;
+      height: calc(100vh - 6.25rem); 
+      position: relative;           
+      left: 0;
+      transform: none;
+      display: flex;
+      flex-direction: column;       
+      justify-content: flex-start; 
+      align-items: stretch;
+    }
+  }
+
+  
+  &__content {
+    pointer-events: auto;     
+    width: 75%;              
+    max-width: 37.5rem;       
+    min-width: 0;             
+    margin-bottom: 1.875rem;
+
+  
+    @include tab {
+      width: 100%;
+      max-width: 100%;
+      margin-top: auto;        
+      padding-top: 5rem;     
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    background-color: #fff;
+    color: $color-main;
+    padding: 0.625rem 1.875rem;
+    border-radius: 0.625rem;
+    font-size: 2.75rem; 
+    font-family: $font-accent;
+    font-weight: $weight-bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+
+    @include tab {
+      font-size: 1.5rem; 
+      padding: 0.5rem 0.875rem;
+      margin-bottom: 0.625rem;
+    }
+  }
+
+  &__text {
+    background-color: #fff;
+    color: $color-text;
+    display: table;           
+    padding: 0.5rem 1.25rem;
+    margin-bottom: 0;
+    border-radius: 0.625rem;
+    font-size: 1.125rem;
+    font-weight: $weight-bold;
+    line-height: 1.5;
+
+    &:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+
+    @include tab {
+      font-size: 1rem;
+      padding: 0.375rem 0.625rem;
+      &:not(:last-child) {
+        margin-bottom: 0.375rem;
+      }
+    }
+  }
+
+  
+  &__sns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  
+    gap: 1.5rem;
+    pointer-events: auto;
+    width: 20%;              
+    margin-bottom: 1.875rem; 
+
+    @include tab {
+      width: 100%;            
+      margin-top: 2rem;        
+      margin-bottom: 1.875rem; 
+      gap: 1rem;
+    }
+
+    &-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;    
+      gap: 0.5rem;
+
+      a {
+        color: $color-text;
+        font-size: 1.25rem;
+        transition: color 0.3s;
+        &:hover { color: $color-main; }
+
+        @include tab {
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
+
+  &__copy {
+    writing-mode: vertical-rl; 
+    font-size: 0.75rem;
+    color: $color-text;
+    letter-spacing: 0.1em;
+    margin-top: 0.5rem;
+    
+    @include tab {
+      font-size: 0.625rem;
+    }
+  }
+}
+
+
+// 共通青いボタン
+.c-btn-solid {
+  display: inline-flex;  
+  align-items: center;
+  justify-content: center;
+  padding: 0.6875rem 0.9375rem; 
+  background-color: #fff;  
+  color: $color-text;  
+  font-size: 1rem; 
+  font-weight: $weight-regular;
+  border: 2px solid $color-main; 
+  border-radius: 6.25rem;   
+  text-decoration: none;
+  box-shadow: 0.3125rem 0.3125rem 0rem $color-main; 
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+  cursor: pointer;
+
+  
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;         
+    height: 1.5rem;
+    margin-left: 1.25rem;   
+    background-color: $color-main; 
+    color: #fff;            
+    border-radius: 50%;  
+    font-size: 0.75rem;
+    transition: background-color 0.3s, color 0.3s;
+
+    i {
+      line-height: 1;
+    }
+  }
+
+  
+  &:hover {
+    box-shadow: 0 0 0 transparent; 
+    transform: translate(0.3125rem, 0.3125rem); 
+    background-color: $color-main; 
+    color: #fff;         
+
+    .c-btn-solid__icon {
+      background-color: #fff; 
+      color: $color-main; 
+    }
+  }
+}
+
+
+// concept
+.concept {
+  width: 100%;
+  padding-block: 10rem;  
+  background-color: #fff;
+
+  @include tab {
+    padding-block: 7.5rem; 
+  }
+
+  &__container {
+    max-width: $layout-inner;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: $padding;
+    box-sizing: border-box;
+    @include flex(space-between);
+    align-items: flex-end; 
+
+    @include tab {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      gap: 2.5rem;            
+    }
+  }
+
+  &__body {
+    width: 60%;               
+    text-align: left;         
+
+    @include tab {
+      width: 100%;            
+    }
+  }
+
+  &__title {
+    font-size: 2rem;  
+    font-weight: $weight-bold;
+    color: $color-text;
+    line-height: 1.5;
+    margin-bottom: 2rem;      
+
+    @include tab {
+      font-size: 1.5rem; 
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.125rem;   
+    color: $color-text;       
+    line-height: 1.8;         
+
+    @include tab {
+      font-size: 1rem; 
+    }
+  }
+
+  &__btn-wrapper {
+    width: 35%;           
+    @include flex(center);
+    align-items: flex-end;   
+    
+    @include tab {
+      width: 100%;            
+      justify-content: center;
+    }
+  }
+}
+
+
+// パララックス
+.c-visual-parallax {
+  width: 100%;
+  height: 25rem;     
+  background-image: 
+    linear-gradient($color-sub, $color-sub),
+    url('../img/para01.jpg');
+  background-blend-mode: multiply; 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+  @include tab {
+    height: 12.5rem; 
+    background-attachment: scroll;
+  }
+}
+
+
+// 共通オレンジのボタン
+.c-btn-accent {
+  display: inline-flex;  
+  align-items: center;
+  justify-content: center;
+  padding: 0.6875rem 0.9375rem;
+  background-color: #fff;  
+  color: $color-text; 
+  font-size: 1rem;    
+  font-weight: $weight-regular;
+  border: 0.125rem solid $color-accent-80;
+  border-radius: 6.25rem; 
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+  cursor: pointer;
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;            
+    height: 1.5rem;
+    margin-left: 1.25rem;      
+    background-color: $color-accent-80; 
+    color: #fff;               
+    border-radius: 50%;       
+    font-size: 0.75rem;     
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+
+    i {
+      line-height: 1;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 transparent;
+    transform: scale(1.05);
+    background-color: $color-accent-80;
+    color: #fff;
+
+    .c-btn-accent__icon {
+      background-color: #fff;
+      color: $color-accent-80;
+      transform: translateX(0.25rem);
+    }
+  }
+}
+
+// 共通トップページ見出し
+.c-section-header {
+  position: relative;
+  text-align: left;          
+  margin-bottom: 7.5rem; 
+
+  @include tab {
+    margin-bottom: 5rem;
+  }
+
+  &__en {
+    display: block;
+    font-size: 1rem;        
+    font-weight: $weight-regular;
+    color: $color-text;     
+    line-height: 1;
+    margin-bottom: 0.75rem; 
+    font-family: $font-accent;
+  }
+
+  
+  &__title {
+    display: inline-block;      
+    font-size: 2.25rem;      
+    font-weight: $weight-bold;
+    color: $color-text;
+    line-height: 1.2;
+    position: relative;
+
+    @include tab {
+      font-size: 1.5rem;
+    }
+
+    
+    &::before {
+      content: "";
+      position: absolute;
+      left: -0.875rem; 
+      top: 0.2rem;
+      width: 0.25rem;
+      height: 1.1rem;
+      background-color: $color-main;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -0.875rem;       
+      top: 1.3rem;
+      width: 0.25rem;       
+      height: 1.1rem;
+      background-color: $color-accent-80;
+    }
+  }
+
+  
+  &--center {
+    margin-bottom: 3.75rem; 
+
+    @include tab {
+      text-align: center;
+    }
+
+    .c-section-header__title {
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      padding-block: 0.9375rem;
+      padding-left: 0;
+      display: inline-block;
+      border-top: 0.125rem solid $color-main; 
+      border-bottom: 0.125rem solid $color-main;
+    }
+  }
+}
+
+// service
+.service {
+  width: 100%;
+  padding-block: 7.5rem;
+  background-color: $color-bg;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+
+  @include tab {
+    padding-block: 5rem;
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  &__inner {
+    max-width: $layout-inner; 
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: $padding; 
+    box-sizing: border-box;
+
+    @include tab {
+      padding-inline: 2rem;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 7.5rem;
+
+    @include tab {
+      gap: 5rem;             
+    }
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;   
+  }
+}
+
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  @include tab {
+    flex-direction: column; 
+    gap: 2.5rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  &:nth-child(even) {
+    flex-direction: row-reverse; 
+
+    @include tab {
+      flex-direction: column; 
+    }
+  }
+
+  &__img-wrapper {
+    width: 45%;
+    height: auto;            
+    display: flex;            
+
+    @include tab {
+      width: 100%;
+      height: 15.625rem; 
+    }
+  }
+
+  &__img {
+    @include img;               
+    width: 100%;
+    height: 100%;
+    border-radius: 0.625rem; 
+  }
+
+  &__body {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    
+    @include tab {
+      width: 100%;
+    }
+  }
+
+  &__num {
+    display: block;
+    font-size: 2.5rem;  
+    font-family: $font-accent;
+    font-weight: $weight-bold;
+    color: $color-text;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: 1.375rem; 
+    font-weight: $weight-bold;
+    color: $color-text;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+
+    @include tab {
+      font-size: 1.125rem; 
+    }
+  }
+
+  &__text {
+    font-size: 1rem;  
+    color: $color-text;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    
+    @include tab {
+      text-align: left; 
+    }
+  }
+
+  &__btn-wrapper {
+  display: flex;
+  justify-content: center;
+
+}
+}
+
+// 制作の流れ
+.flow {
+  margin-top: 7.5rem; 
+
+  @include tab {
+    margin-top: 5rem;  
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+
+    @include tab {
+      flex-wrap: wrap;         
+      justify-content: center; 
+      gap: 1rem; 
+    }
+  }
+}
+
+
+.flow-step {
+  flex: 1;
+  background-color: #fff;
+  padding: 2rem 0.625rem 1.5rem;
+  border-radius: 0.625rem; 
+  text-align: center;
+
+  @include tab {
+    flex: none;
+    width: calc(50% - 0.5rem); 
+    box-sizing: border-box;
+    padding: 1.5rem 0.75rem; 
+  }
+
+  &__head {
+    display: inline-block;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem; 
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 1.125rem;  
+      height: 0.1875rem;  
+    }
+
+    &::before {
+      right: 50%;
+      background-color: $color-main;
+    }
+
+    &::after {
+      left: 50%;
+      background-color: $color-accent-80;
+    }
+  }
+
+  &__num {
+    font-size: 0.875rem;   
+    font-weight: $weight-medium;
+    color: $color-text;
+    margin-right: 0.125rem;
+  }
+
+  &__name {
+    font-size: 0.875rem;
+    font-weight: $weight-medium;
+    color: $color-text;
+    white-space: nowrap;
+
+    @include tab {
+      white-space: normal;
+    }
+  }
+
+  &__text {
+    font-size: 1rem; 
+    color: $color-text;
+    line-height: 1.6;
+    text-align: left;      
+
+    @include tab {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+// works
+.works {
+  width: 100%;
+  margin-bottom: 10rem;
+  background-color: #fff;       
+
+  @include tab {
+    margin-bottom: 7.5rem;
+  }
+
+  &__inner {
+    max-width: $layout-inner;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: $padding;
+    box-sizing: border-box;
+
+    @include tab {
+      padding-inline: 2rem;
+    }
+  }
+
+  &__category {
+    margin-bottom: 5rem;
+
+    @include tab {
+      margin-bottom: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0; 
+    }
+  }
+
+
+  &__category-title {
+    font-size: 1.125rem;
+    font-weight: $weight-medium;
+    color: $color-text;
+    margin-bottom: 3.75rem;        
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 1.25rem;           
+      height: 1.25rem;          
+      background-color: $color-main;
+      border-radius: 50%;  
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;     
+    margin-bottom: 3.75rem;
+
+    @include tab {
+      flex-direction: column;   
+      gap: 2rem;               
+      align-items: center;
+    }
+  }
+
+
+  &__divider {
+    border: none;
+    border-top: 0.0625rem solid #e0e0e0;
+    margin-block: 3.75rem;         
+
+    @include tab {
+      margin-block: 1.875rem;     
+    }
+  }
+
+
+  &__btn-wrapper {
+    display: flex;
+    justify-content: center;  
+    width: 100%;
+  }
+
+
+  &__bottom-btn-wrapper {
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+    margin-top: 7.5rem;        
+
+    @include tab {
+      margin-top: 5rem;
+    }
+  }
+}
+
+
+.works-item {
+  flex: 1;                      
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  @include tab {
+    width: 100%;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;        
+    color: inherit;               
+  }
+
+  
+  &__content {
+    position: relative;
+    overflow: hidden;           
+    border-radius: 0.625rem;     
+    margin-bottom: 0.75rem;  
+
+
+    &.-mask-from-top {
+      &:hover {
+        .works-item__mask {
+          top: 0;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__img-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 11;      
+    overflow: hidden;           
+  }
+
+  &__img {
+    @include img;              
+    height: 100%;               
+  }
+
+  &__mask {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-main;
+    opacity: 0;
+    top: -100%; 
+    transition: top 0.5s ease, opacity 0.5s ease;
+  }
+
+
+  &__mask-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    padding-inline: 1rem;       
+    color: #fff;
+    transform: translateY(-50%);
+    
+    display: flex;
+    flex-direction: column;     
+    gap: 0.5rem;                
+    text-align: center;
+  }
+
+  &__company-name {
+    display: block;
+    font-size: 1rem;            
+    font-weight: 700;
+  }
+
+  &__site-type {
+    display: block;
+    font-size: 0.8125rem;       
+    font-weight: 400;
+  }
+
+  &__text {
+    font-size: 0.875rem; 
+    font-weight: 500;
+    color: #333;                
+    line-height: 1.5;
+    text-align: center;          
+
+    @include tab {
+      text-align: center; 
+    }
+  }
+}
+
+// news
+.news {
+  width: 100%;
+  padding-block: 7.5rem; 
+  background-color: $color-bg; 
+
+  @include tab {
+    padding-block: 5rem; 
+  }
+
+  &__inner {
+    max-width: $layout-inner; 
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: $padding;
+    box-sizing: border-box;
+
+    @include tab {
+      padding-inline: 2rem;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    border-top: 0.0625rem solid $color-text;
+    border-bottom: 0.0625rem solid $color-text;
+    margin-bottom: 7.5rem;  
+
+    @include tab {
+      margin-bottom: 5rem;  
+    }
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+  }
+}
+
+.news-item {
+  width: 100%;
+  border-bottom: 0.0625rem solid $color-text;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;        
+    padding-block: 1.5rem;      
+    text-decoration: none;      
+    color: $color-text;
+
+    &:hover {
+      .news-item__title {
+        color: $color-main; 
+      }
+    }
+
+    @include tab {
+      flex-direction: column;   
+      align-items: flex-start;  
+      gap: 0.5rem;              
+      padding-block: 1.25rem;    
+    }
+  }
+
+  
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;               
+    flex-shrink: 0;             
+    width: 15rem;             
+
+    @include tab {
+      width: 100%;              
+      gap: 1rem;              
+    }
+  }
+
+
+  &__date {
+    font-size: 1rem;         
+    font-weight: 500;
+    color: $color-text;
+  }
+
+  &__category {
+    font-size: 0.875rem;    
+    font-weight: 500;
+    color: #888;             
+  }
+
+
+  &__title {
+    font-size: 1rem;        
+    font-weight: 500;
+    color: $color-text;
+    line-height: 1.6;
+    text-align: left;
+    transition: color 0.3s ease; 
+    flex: 1;
+
+    @include tab {
+      font-size: 0.9375rem; 
+    }
+  }
+}
+
+
+.news__parallax {
+  width: 100%;
+  height: 25rem;     
+  background-image: 
+    linear-gradient($color-sub, $color-sub),
+    url('../img/para02.jpg'); 
+  background-blend-mode: multiply; 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+  @include tab {
+    height: 12.5rem; 
+    background-attachment: scroll;
+  }
+
+  &--news {
+    height: 30rem; 
+
+
+    background-image: 
+      linear-gradient($color-sub, $color-sub),
+      url('../img/para02.jpg'); 
+
+    @include tab {
+      height: 15rem;
+    }
+  }
+}
+
+// 共通contact
+.contact {
+  width: 100%;
+  padding-block: 10rem;  
+  background-color: #fff;       
+
+  @include tab {
+    padding-block: 7.5rem; 
+    padding-bottom: 0;
+  }
+
+
+  &__inner {
+    max-width: $layout-inner-narrow;    
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: $padding;
+    box-sizing: border-box;
+
+
+    background-image: 
+      linear-gradient($color-accent-20, $color-accent-20), 
+      url('../img/contactbg.jpg'); 
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0.625rem; 
+    padding: 3.75rem;
+
+    @include tab {
+      padding: 3.75rem 1.5rem; 
+      border-radius: 0;
+    }
+  }
+
+  &__box {
+    background-color: #fff;
+    border-radius: 0.625rem; 
+    padding: 2.5rem 2rem; 
+    text-align: center;
+    max-width: 25rem;          
+    width: 100%;               
+    margin-inline: auto;        
+    margin-bottom: 2.5rem;     
+
+    @include tab {
+      padding: 2rem 1rem;    
+    }
+  }
+
+  &__en {
+    display: block;
+    font-size: 0.875rem;
+    font-family: $font-accent;
+    font-weight: $weight-regular;
+    color: $color-accent-80;
+    margin-bottom: 0.5rem;
+  }
+
+
+  &__title {
+    font-size: 2rem;           
+    font-weight: $weight-bold;
+    color: $color-accent-80;
+    margin-bottom: 2rem;
+
+    @include tab {
+      font-size: 1.625rem;
+    }
+  }
+
+
+  &__text {
+    font-size: 1rem;
+    font-weight: $weight-medium;
+    color: $color-text;
+    line-height: 1.8;
+  }
+
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;              
+    width: 100%;
+
+    @include tab {
+      flex-direction: column;
+      gap: 1rem;             
+      align-items: center;  
+    }
+  }
+}
+
+.c-btn-contact {
+  position: relative;
+  overflow: hidden;           
+  z-index: 1;               
+  flex: 1;
+  max-width: 18.75rem;          
+  width: 100%;
+  height: 3.5rem;           
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9375rem;             
+  border-radius: 0.625rem;       
+  font-size: 1.125rem;        
+  font-weight: 700;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: color 0.4s ease, border-color 0.4s ease;
+
+  @include tab {
+    max-width: 18.75rem;
+  }
+
+  &__icon {
+    font-size: 1.125rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;             
+    width: 100%;
+    height: 100%;
+    background-color: #fff;    
+    z-index: -1;              
+    transition: left 0.4s ease; 
+  }
+
+
+  &:hover {
+    &::before {
+      left: 0;   
+    }
+  }
+
+  
+  &.-phone {
+    background-color: $color-main; 
+    color: #fff;              
+    border: 0.0625rem solid $color-main; 
+
+
+    &:hover {
+      color: $color-main; 
+      border-color: $color-main;
+    }
+  }
+
+  &.-form {
+    background-color: $color-accent-80; 
+    color: #fff;                
+    border: 0.0625rem solid $color-accent-80; 
+
+    &:hover {
+      color: $color-accent-80;
+      border-color: $color-accent-80;
+    }
+  }
+}
+
+
+// ページトップ
+.c-page-top {
+  position: fixed;
+  right: 2rem;     
+  bottom: 2rem;      
+  z-index: 100;      
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1rem);
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+
+  &.is-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  @include tab {
+    right: 1rem;     
+    bottom: 1rem;
+  }
+
+  
+  &__link {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-decoration: none;
+    color: #777;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-0.25rem);
+    }
+  }
+
+  &__arrow {
+    font-size: 1.125rem;
+    margin-bottom: 0.8rem;
+  }
+
+  &__text {
+    font-size: 0.75rem;
+    font-weight: 700;
+    writing-mode: vertical-rl; 
+    font-family: $font-accent;
+    letter-spacing: 0.1em;
+  }
+}
+
+
+
+
+
+
+
+
+// // 境界線確認用の赤枠
+// * {
+//   outline: 1px solid red !important;
+// }

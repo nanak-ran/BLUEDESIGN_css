@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Blue Designのポートフォリオサイトです。誠実さと信頼感のあるWeb制作をお届けします。"
+    />
+    <title>Blue Design</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="appear">
+    <div id="container">
+      <!-- ヘッダー -->
+      <header class="header" id="header">
+        <div class="header-wrap">
+          <h1 class="header-wrap__ttl">
+            <a href="index.html"><img src="img/logo.svg" alt="ロゴマーク" /></a>
+          </h1>
+          <nav class="header-wrap__nav">
+            <ul class="header-wrap__list">
+              <li class="header-wrap__item">
+                <a href="about.html">私たちについて</a>
+              </li>
+              <li class="header-wrap__item">
+                <a href="service.html">サービス</a>
+                <!-- ドロップダウン -->
+                <ul class="header-nav-sub">
+                  <li class="header-nav-sub__item">
+                    <a href="service.html#hp-production">ホームページ制作</a>
+                  </li>
+                  <li class="header-nav-sub__item">
+                    <a href="service.html#support">運用サポート</a>
+                  </li>
+                  <li class="header-nav-sub__item">
+                    <a href="service.html#graphic">グラフィックデザイン</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header-wrap__item">
+                <a href="works.html">制作・導入実績</a>
+              </li>
+              <li class="header-wrap__item">
+                <a href="news.html">お知らせ</a>
+              </li>
+            </ul>
+
+            <div class="header-wrap__btn">
+              <a href="contact.html">お問い合わせ</a>
+            </div>
+          </nav>
+
+          <!-- ハンバーガーメニュー -->
+          <div class="toggle_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="sub-fv">
+          <div class="sub-fv__bg sub-fv__bg--service">
+            <div class="sub-fv__inner">
+              <h2 class="sub-fv__title-box">
+                <span class="sub-fv__en">Service</span>
+                <span class="sub-fv__ja">サービス</span>
+              </h2>
+            </div>
+          </div>
+
+          <div class="sub-fv__breadcrumb">
+            <div class="sub-fv__breadcrumb-inner">
+              <a href="index.html">HOME</a> &sol; <span>サービス</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="hp-production" class="service-detail">
+          <div class="service-detail__inner">
+            <div class="service-detail__main">
+              <div class="service-detail__main-lead">
+                <h2 class="service-detail__main-title">ホームページ制作</h2>
+                <p class="service-detail__main-subtitle">
+                  目的を整理し、届くかたちにします。
+                </p>
+                <p class="service-detail__main-text">
+                  事業の背景まで丁寧に理解した上で制作します。構成からデザインまで一貫して考え、「誰に、何を伝えたいのか」がまっすぐ届くホームページをご提案します。
+                </p>
+              </div>
+              <div class="service-detail__main-btn-wrap">
+                <a href="works.html?filter=hp" class="c-btn-accent">
+                  制作実績を見る
+                  <span class="c-btn-accent__icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <div class="service-detail__lineup">
+              <h3 class="service-detail__section-title">ラインナップ</h3>
+              <ul class="service-detail__list">
+                <li class="service-detail__item">
+                  <h4 class="service-detail__item-title">コーポレートサイト</h4>
+                  <p class="service-detail__item-text">
+                    事業への情熱や強みを丁寧に整理し、長く愛される構成にします。名刺代わりとしてだけでなく、誠実さがまっすぐ伝わるデザインをご提案します。
+                  </p>
+                  <div class="service-detail__price">
+                    <span class="service-detail__price-label">費用の目安</span>
+                    <span class="service-detail__price-value"
+                      >400,000yen〜</span
+                    >
+                  </div>
+                </li>
+
+                <li class="service-detail__item">
+                  <h4 class="service-detail__item-title">オンラインショップ</h4>
+                  <p class="service-detail__item-text">
+                    商品の魅力はもちろん、作り手の想いまで届けるショップを構築します。初めての方でも迷わずお買い物ができる、安心感のある操作性を大切にしています。
+                  </p>
+                  <div class="service-detail__price">
+                    <span class="service-detail__price-label">費用の目安</span>
+                    <span class="service-detail__price-value"
+                      >300,000yen〜</span
+                    >
+                  </div>
+                </li>
+
+                <li class="service-detail__item">
+                  <h4 class="service-detail__item-title">採用求人サイト</h4>
+                  <p class="service-detail__item-text">
+                    仕事内容や職場の雰囲気を可視化し、価値観の合う人材との出会いを繋ぎます。未来の仲間へ向けた、温かみのあるメッセージを届けるサイトを制作します。
+                  </p>
+                  <div class="service-detail__price">
+                    <span class="service-detail__price-label">費用の目安</span>
+                    <span class="service-detail__price-value"
+                      >500,000yen〜</span
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="service-detail__faq">
+              <h3 class="service-detail__section-title">よくあるご質問</h3>
+              <div class="service-detail__faq-container">
+                <div class="service-detail__faq-item">
+                  <button class="service-detail__faq-q">
+                    パソコンに詳しくないのですが、大丈夫でしょうか？
+                  </button>
+                  <div class="service-detail__faq-a">
+                    <p class="service-detail__faq-a-text">
+                      はい、もちろんです。安心してお任せください。
+                    </p>
+                  </div>
+                </div>
+                <div class="service-detail__faq-item">
+                  <button class="service-detail__faq-q">
+                    制作費用はどれくらいかかりますか？
+                  </button>
+                  <div class="service-detail__faq-a">
+                    <p class="service-detail__faq-a-text">
+                      サイトの規模や機能によって異なりますが、ラインナップに記載の金額が目安となります。詳細はお見積もりいたします。
+                    </p>
+                  </div>
+                </div>
+                <div class="service-detail__faq-item">
+                  <button class="service-detail__faq-q">
+                    制作期間はどれくらいですか？
+                  </button>
+                  <div class="service-detail__faq-a">
+                    <p class="service-detail__faq-a-text">
+                      通常、ヒアリングから納品まで約1ヶ月〜2ヶ月程度のお時間をいただいております。
+                    </p>
+                  </div>
+                </div>
+                <div class="service-detail__faq-item">
+                  <button class="service-detail__faq-q">
+                    公開後のサポートはありますか？
+                  </button>
+                  <div class="service-detail__faq-a">
+                    <p class="service-detail__faq-a-text">
+                      はい、ございます。詳しくは下記の「運用サポート」セクションをご覧ください。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="support" class="service-detail service-detail--middle">
+          <div class="service-detail__inner">
+            <div class="service-detail__main">
+              <div class="service-detail__main-lead">
+                <h2 class="service-detail__main-title">運用サポート</h2>
+                <p class="service-detail__main-subtitle">
+                  公開後も寄り添い、共に歩みます。
+                </p>
+                <p class="service-detail__main-text">
+                  ホームページは作ってからが本番です。日々の更新作業や困りごとにも丁寧に向き合い、大切なサイトが長く愛され続けるよう、心を込めてサポートいたします。
+                </p>
+              </div>
+              <div class="service-detail__main-btn-wrap">
+                <a href="works.html?filter=support" class="c-btn-accent">
+                  運用実績を見る
+                  <span class="c-btn-accent__icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <div class="service-detail__lineup">
+              <h3 class="service-detail__section-title">ラインナップ</h3>
+              <ul class="service-detail__list">
+                <li class="service-detail__item">
+                  <h4 class="service-detail__item-title">更新サポート</h4>
+                  <p class="service-detail__item-text">
+                    お知らせの更新や写真の差し替えなど、日々の細かな修正を代行いたします。「やりたい」と思ったときにすぐ反映できるよう、身近なパートナーとして支えます。
+                  </p>
+                  <div class="service-detail__price">
+                    <span class="service-detail__price-label">費用の目安</span>
+                    <span class="service-detail__price-value">10,000yen〜</span>
+                  </div>
+                </li>
+
+                <li class="service-detail__item">
+                  <h4 class="service-detail__item-title">定期メンテナンス</h4>
+                  <p class="service-detail__item-text">
+                    システムのアップデートやバックアップなど、目に見えないけれど大切な管理を代行します。トラブルを未然に防ぎ、サイトが常に安全に動く状態を保ちます。
+                  </p>
+                  <div class="service-detail__price">
+                    <span class="service-detail__price-label">費用の目安</span>
+                    <span class="service-detail__price-value">5,000yen〜</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="service-detail__faq">
+              <h3 class="service-detail__section-title">よくあるご質問</h3>
+              <div class="service-detail__faq-container">
+                <div class="service-detail__faq-item">
+                  <button class="service-detail__faq-q">
+                    他社で作ったサイトの管理も頼めますか？
+                  </button>
+                  <div class="service-detail__faq-a">
+                    <p class="service-detail__faq-a-text">
+                      まずは一度拝見し、最適なサポート方法をご提案します。
+                    </p>
+                  </div>
+                </div>
+                <div class="service-detail__faq-item">
+                  <button class="service-detail__faq-q">
+                    毎月の費用を抑えるプランはありますか？
+                  </button>
+                  <div class="service-detail__faq-a">
+                    <p class="service-detail__faq-a-text">
+                      お客様の更新頻度に合わせた柔軟なプランをご用意しておりますので、ご相談ください。
+                    </p>
+                  </div>
+                </div>
+                <div class="service-detail__faq-item">
+                  <button class="service-detail__faq-q">
+                    月の途中で修正をお願いしてもいいですか？
+                  </button>
+                  <div class="service-detail__faq-a">
+                    <p class="service-detail__faq-a-text">
+                      はい、契約プランの範囲内であればいつでもご依頼いただけます。
+                    </p>
+                  </div>
+                </div>
+                <div class="service-detail__faq-item">
+                  <button class="service-detail__faq-q">
+                    パソコン操作の相談に乗ってもらえますか？
+                  </button>
+                  <div class="service-detail__faq-a">
+                    <p class="service-detail__faq-a-text">
+                      はい、メールやオンライン通話にて丁寧にお答えいたします。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="graphic" class="service-detail service-detail--bottom">
+          <div class="service-detail__inner">
+            <div class="service-detail__main">
+              <div class="service-detail__main-lead">
+                <h2 class="service-detail__main-title">グラフィックデザイン</h2>
+                <p class="service-detail__main-subtitle">
+                  想いをかたちにし、印象を整えます。
+                </p>
+                <p class="service-detail__main-text">
+                  ロゴや名刺、パンフレットなど、一貫性のあるデザインでブランド力を高めます。伝えたいイメージを大切に汲み取り、人の心に残るデザインをご提案します。
+                </p>
+              </div>
+              <div class="service-detail__main-btn-wrap">
+                <a href="works.html?filter=graphic" class="c-btn-accent">
+                  制作実績を見る
+                  <span class="c-btn-accent__icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <div class="service-detail__lineup">
+              <h3 class="service-detail__section-title">ラインナップ</h3>
+              <ul class="service-detail__list">
+                <li class="service-detail__item">
+                  <h4 class="service-detail__item-title">ショップカード制作</h4>
+                  <p class="service-detail__item-text">
+                    手に取った瞬間、お店の雰囲気や想いが伝わるカードをお作りします。また来たくなる、誰かに紹介したくなるような、温かみのあるデザインをご提案します。
+                  </p>
+                  <div class="service-detail__price">
+                    <span class="service-detail__price-label">費用の目安</span>
+                    <span class="service-detail__price-value">15,000yen〜</span>
+                  </div>
+                </li>
+
+                <li class="service-detail__item">
+                  <h4 class="service-detail__item-title">名刺デザイン</h4>
+                  <p class="service-detail__item-text">
+                    名刺は大切なご挨拶の道具です。お仕事への姿勢や誠実さがまっすぐ伝わり、お渡しした後の会話が弾むような、信頼感のあるデザインを形にします。
+                  </p>
+                  <div class="service-detail__price">
+                    <span class="service-detail__price-label">費用の目安</span>
+                    <span class="service-detail__price-value">10,000yen〜</span>
+                  </div>
+                </li>
+
+                <li class="service-detail__item">
+                  <h4 class="service-detail__item-title">ロゴ制作</h4>
+                  <p class="service-detail__item-text">
+                    事業のコンセプトや大切にされている価値観を丁寧に伺い、シンボルとなるロゴを制作します。長く愛され、見るたびに背筋が伸びるような一点を目指します。
+                  </p>
+                  <div class="service-detail__price">
+                    <span class="service-detail__price-label">費用の目安</span>
+                    <span class="service-detail__price-value">50,000yen〜</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="service-detail__faq">
+              <h3 class="service-detail__section-title">よくあるご質問</h3>
+              <div class="service-detail__faq-container">
+                <div class="service-detail__faq-item">
+                  <button class="service-detail__faq-q">
+                    印刷までお願いすることはできますか？
+                  </button>
+                  <div class="service-detail__faq-a">
+                    <p class="service-detail__faq-a-text">
+                      はい、印刷手配まで代行可能です。
+                    </p>
+                  </div>
+                </div>
+                <div class="service-detail__faq-item">
+                  <button class="service-detail__faq-q">
+                    デザインの修正は何回まで可能ですか？
+                  </button>
+                  <div class="service-detail__faq-a">
+                    <p class="service-detail__faq-a-text">
+                      基本料金内で3回までご納得いくまで修正対応いたします。
+                    </p>
+                  </div>
+                </div>
+                <div class="service-detail__faq-item">
+                  <button class="service-detail__faq-q">
+                    ロゴのデータは納品してもらえますか？
+                  </button>
+                  <div class="service-detail__faq-a">
+                    <p class="service-detail__faq-a-text">
+                      はい、aiデータやpngデータなど、ご希望の形式で納品いたします。
+                    </p>
+                  </div>
+                </div>
+                <div class="service-detail__faq-item">
+                  <button class="service-detail__faq-q">
+                    1枚からの名刺制作も可能ですか？
+                  </button>
+                  <div class="service-detail__faq-a">
+                    <p class="service-detail__faq-a-text">
+                      はい、小ロットの印刷手配も承っておりますのでお気軽にご相談ください。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact" id="contact">
+          <div class="contact__inner">
+            <div class="contact__box">
+              <span class="contact__en">Contact</span>
+              <h4 class="contact__title">お問い合わせ</h4>
+              <p class="contact__text">
+                お仕事のご相談・ご質問など<br />
+                何でもお気軽にお問い合わせください
+              </p>
+            </div>
+
+            <div class="contact__buttons">
+              <a href="tel:000-0000-0000" class="c-btn-contact -phone">
+                <span class="c-btn-contact__icon"
+                  ><i class="fa-solid fa-phone"></i
+                ></span>
+                000-0000-0000
+              </a>
+
+              <a href="contact.html" class="c-btn-contact -form">
+                <span class="c-btn-contact__icon"
+                  ><i class="fa-solid fa-paper-plane"></i
+                ></span>
+                お問い合わせフォーム
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="footer__content">
+            <div class="footer__info">
+              <div class="footer__logo">
+                <a href="index.html"
+                  ><img src="img/logo.svg" alt="Blue Design"
+                /></a>
+              </div>
+              <address class="footer__address">
+                〒000-0000<br />
+                福岡県福岡市123番地45 福岡ビルディング502
+              </address>
+              <p class="footer__tel">TEL:000-0000-0000</p>
+
+              <div class="footer__sns">
+                <a
+                  href="https://www.instagram.com/"
+                  class="footer__sns-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a
+                  href="https://www.facebook.com/"
+                  class="footer__sns-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-square-facebook"></i>
+                </a>
+
+                <a
+                  href="https://x.com/"
+                  class="footer__sns-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="footer__nav-wrapper">
+              <div class="footer__nav-lists">
+                <ul class="footer__nav-list">
+                  <li><a href="service.html">サービス</a></li>
+                  <li>
+                    <a href="service.html#hp-production">・ホームページ制作</a>
+                  </li>
+                  <li><a href="service.html#support">・運用サポート</a></li>
+                  <li>
+                    <a href="service.html#graphic">・グラフィックデザイン</a>
+                  </li>
+                </ul>
+                <ul class="footer__nav-list">
+                  <li><a href="about.html">私たちについて</a></li>
+                  <li><a href="works.html">制作・導入実績</a></li>
+                  <li><a href="news.html">お知らせ</a></li>
+                </ul>
+              </div>
+
+              <div class="footer__btn-wrapper">
+                <a href="contact.html" class="c-btn-footer"
+                  >お問い合わせフォーム</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__copyright">
+          <small>&copy; Blue Design.Inc</small>
+        </div>
+      </footer>
+
+      <div id="js-page-top" class="c-page-top">
+        <a href="#" class="c-page-top__link">
+          <span class="c-page-top__arrow"
+            ><i class="fa-solid fa-arrow-up"></i
+          ></span>
+          <span class="c-page-top__text">page top</span>
+        </a>
+      </div>
+    </div>
+    <!-- /#container -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

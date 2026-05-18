@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Blue Designのポートフォリオサイトです。誠実さと信頼感のあるWeb制作をお届けします。"
+    />
+    <title>お問い合わせ | Blue Design</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="appear">
+    <div id="container">
+      <header class="header" id="header">
+        <div class="header-wrap">
+          <h1 class="header-wrap__ttl">
+            <a href="index.html"><img src="img/logo.svg" alt="ロゴマーク" /></a>
+          </h1>
+          <nav class="header-wrap__nav">
+            <ul class="header-wrap__list">
+              <li class="header-wrap__item">
+                <a href="about.html">私たちについて</a>
+              </li>
+              <li class="header-wrap__item">
+                <a href="service.html">サービス</a>
+                <!-- ドロップダウン -->
+                <ul class="header-nav-sub">
+                  <li class="header-nav-sub__item">
+                    <a href="service.html#hp-production">ホームページ制作</a>
+                  </li>
+                  <li class="header-nav-sub__item">
+                    <a href="service.html#support">運用サポート</a>
+                  </li>
+                  <li class="header-nav-sub__item">
+                    <a href="service.html#graphic">グラフィックデザイン</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header-wrap__item">
+                <a href="works.html">制作・導入実績</a>
+              </li>
+              <li class="header-wrap__item">
+                <a href="news.html">お知らせ</a>
+              </li>
+            </ul>
+
+            <div class="header-wrap__btn">
+              <a href="contact.html">お問い合わせ</a>
+            </div>
+          </nav>
+          <div class="toggle_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="sub-fv">
+          <div class="sub-fv__bg sub-fv__bg--contact">
+            <div class="sub-fv__inner">
+              <h2 class="sub-fv__title-box">
+                <span class="sub-fv__en">Contact</span>
+                <span class="sub-fv__ja">お問い合わせ</span>
+              </h2>
+            </div>
+          </div>
+          <div class="sub-fv__breadcrumb">
+            <div class="sub-fv__breadcrumb-inner">
+              <a href="index.html">HOME</a> &sol; <span>お問い合わせ</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="sub-contact">
+          <div class="sub-contact__inner">
+            <div class="sub-contact__head">
+              <h3 class="sub-contact__lead">
+                お見積りやご相談だけのお問い合わせも歓迎です。
+              </h3>
+              <p class="sub-contact__note">
+                いただいたお問い合わせは、原則として1〜2営業日以内にご返信いたします。
+              </p>
+              <p class="sub-contact__required-notice">
+                <span>※</span
+                >は必須項目となっておりますので必ず入力してください。
+              </p>
+            </div>
+
+            <form action="#" method="post" class="sub-contact__form">
+              <div class="sub-contact__form-item">
+                <label for="name" class="sub-contact__label">
+                  お名前 <span class="sub-contact__required">※</span>
+                </label>
+                <div class="sub-contact__input-wrap">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="田中 一郎"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="sub-contact__form-item">
+                <label for="company" class="sub-contact__label">
+                  会社名 <span class="sub-contact__required">※</span>
+                </label>
+                <div class="sub-contact__input-wrap">
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="会社・店舗名"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="sub-contact__form-item">
+                <label for="email" class="sub-contact__label">
+                  メールアドレス <span class="sub-contact__required">※</span>
+                </label>
+                <div class="sub-contact__input-wrap">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="info@sample.co.jp"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="sub-contact__form-item">
+                <label for="tel" class="sub-contact__label">電話番号</label>
+                <div class="sub-contact__input-wrap">
+                  <input
+                    type="tel"
+                    id="tel"
+                    name="tel"
+                    placeholder="000-1234-5678"
+                  />
+                </div>
+              </div>
+
+              <div class="sub-contact__form-item -textarea">
+                <label for="message" class="sub-contact__label">
+                  お問い合わせ内容 <span class="sub-contact__required">※</span>
+                </label>
+                <div class="sub-contact__input-wrap">
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="ご相談・お問い合わせなど、お気軽にご連絡ください。"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="sub-contact__policy">
+                <label class="sub-contact__policy-label">
+                  <input type="checkbox" name="policy" required />
+                  <span>個人情報の取扱方針に同意します</span>
+                  <span class="sub-contact__required">※</span>
+                </label>
+                <p class="sub-contact__policy-text">
+                  ※お預かりした個人情報は、お問い合わせへの回答およびサービス提供の範囲内でのみ利用し、適切に管理いたします。
+                </p>
+              </div>
+
+              <div class="sub-contact__submit">
+                <button type="submit" class="sub-contact__btn">送信する</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="contact" id="contact">
+          <div class="contact__inner">
+            <div class="contact__box">
+              <span class="contact__en">Contact</span>
+              <h4 class="contact__title">お問い合わせ</h4>
+              <p class="contact__text">
+                お仕事のご相談・ご質問など<br />
+                何でもお気軽にお問い合わせください
+              </p>
+            </div>
+
+            <div class="contact__buttons">
+              <a href="tel:000-0000-0000" class="c-btn-contact -phone">
+                <span class="c-btn-contact__icon"
+                  ><i class="fa-solid fa-phone"></i
+                ></span>
+                000-0000-0000
+              </a>
+
+              <a href="contact.html" class="c-btn-contact -form">
+                <span class="c-btn-contact__icon"
+                  ><i class="fa-solid fa-paper-plane"></i
+                ></span>
+                お問い合わせフォーム
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="footer__content">
+            <div class="footer__info">
+              <div class="footer__logo">
+                <a href="index.html"
+                  ><img src="img/logo.svg" alt="Blue Design"
+                /></a>
+              </div>
+              <address class="footer__address">
+                〒000-0000<br />
+                福岡県福岡市123番地45 福岡ビルディング502
+              </address>
+              <p class="footer__tel">TEL:000-0000-0000</p>
+              <div class="footer__sns">
+                <a
+                  href="https://www.instagram.com/"
+                  class="footer__sns-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/"
+                  class="footer__sns-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa-brands fa-square-facebook"></i
+                ></a>
+                <a
+                  href="https://x.com/"
+                  class="footer__sns-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+              </div>
+            </div>
+            <div class="footer__nav-wrapper">
+              <div class="footer__nav-lists">
+                <ul class="footer__nav-list">
+                  <li><a href="service.html">サービス</a></li>
+                  <li>
+                    <a href="service.html#hp-production">・ホームページ制作</a>
+                  </li>
+                  <li><a href="service.html#support">・運用サポート</a></li>
+                  <li>
+                    <a href="service.html#graphic">・グラフィックデザイン</a>
+                  </li>
+                </ul>
+                <ul class="footer__nav-list">
+                  <li><a href="about.html">私たちについて</a></li>
+                  <li><a href="works.html">制作・導入実績</a></li>
+                  <li><a href="news.html">お知らせ</a></li>
+                </ul>
+              </div>
+              <div class="footer__btn-wrapper">
+                <a href="contact.html" class="c-btn-footer"
+                  >お問い合わせフォーム</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <small>&copy; Blue Design.Inc</small>
+        </div>
+      </footer>
+
+      <div id="js-page-top" class="c-page-top">
+        <a href="#" class="c-page-top__link">
+          <span class="c-page-top__arrow"
+            ><i class="fa-solid fa-arrow-up"></i
+          ></span>
+          <span class="c-page-top__text">page top</span>
+        </a>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

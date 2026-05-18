@@ -1,0 +1,30 @@
+@use "../global/setting" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+//   scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-main;
+  color: $color-text;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  word-break: break-all;
+//   scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}

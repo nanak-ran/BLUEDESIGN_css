@@ -1,0 +1,181 @@
+@use "../global" as *;
+
+.footer {
+  width: 100%;
+  background-color: $color-bg;
+  padding-top: 5rem; 
+
+  @include tab {
+    padding-top: 3.75rem;  
+  }
+
+  &__inner {
+    max-width: $layout-inner; 
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: $padding; 
+    box-sizing: border-box;
+  }
+
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 5rem; 
+
+    // スマホ（tab）の時は上下が入れ替わります
+    @include tab {
+      flex-direction: column-reverse; 
+      align-items: center;           
+      gap: 3.75rem;         
+      padding-bottom: 3.75rem;
+    }
+  }
+
+
+  &__info {
+    text-align: left;
+
+  }
+
+  &__logo {
+    margin-bottom: 1.5rem;
+    
+    img {
+      width: auto;
+      height: 2.5rem; 
+      object-fit: contain;
+
+      @include tab {
+        height: 2rem;
+      }
+    }
+  }
+
+  &__address, &__tel {
+    font-size: 1rem;
+    font-weight: $weight-regular;
+    color: $color-text;
+    line-height: 1.6;
+    font-style: normal;
+    margin-bottom: 1rem;
+  }
+
+  
+  &__sns {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+  }
+
+  &__sns-link {
+    font-size: 1.5rem; 
+    color: $color-text;
+    transition: opacity 0.3s;
+
+    &:hover {
+      color: $color-main;
+    }
+  }
+
+  
+  &__nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    gap: 2.5rem;
+
+    @include tab {
+      align-items: center; 
+      width: 100%;
+    }
+  }
+
+  &__nav-lists {
+    display: flex;
+    gap: 4rem;
+
+    @include tab {
+      gap: 2rem;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  &__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+
+    li {
+      margin-bottom: 0.75rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #333;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $color-main;
+      }
+    }
+  }
+
+
+  &__btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    @include tab {
+      justify-content: center;
+    }
+    
+    .c-btn-footer {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      color: $color-text;
+      border: 0.0625rem solid $color-accent-80;
+      padding: 0.75rem 2.5rem;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: $weight-regular;
+      
+      box-shadow: 0 0.25rem 0 rgba(#ca8a27, 1); 
+      position: relative;
+      top: 0;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, top 0.1s ease;
+
+      &:hover {
+        top: 0.1875rem;
+        box-shadow: 0 0.0625rem 0 rgba(#ca8a27, 1); 
+      }
+    }
+  }
+
+  &__copyright {
+    width: 100%;
+    background-color: $color-main;
+    padding-block: 1.5rem;
+    text-align: center;
+
+    small {
+      font-size: 0.75rem;
+      color: #fff; 
+      letter-spacing: 0.05em;
+    }
+  }
+}
