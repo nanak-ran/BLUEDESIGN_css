@@ -1,13 +1,13 @@
 $(function () {
-  // ローディングアニメーション
-  $(window).on('load', function () {
-    $("#splash-logo").delay(1200).fadeOut('slow');
-    $("#splash").delay(1500).fadeOut('slow', function () {
+  
+  setTimeout(function () {
+    $("#splash-logo").fadeOut('slow');
+    $("#splash").fadeOut('slow', function () {
       $('body').addClass('appear');
     });
-  });
+  }, 1500);
 
-  //  ハンバーガー
+  //   ハンバーガー
   $(".toggle_btn").on("click", function () {
     $("header").toggleClass("open");
   });
