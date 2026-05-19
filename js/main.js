@@ -170,6 +170,22 @@ $(function () {
       currentPage = 1; 
       updateNewsDisplay();
     });
+
+    
+    const urlParamsNews = new URLSearchParams(window.location.search);
+    const archiveParam = urlParamsNews.get('archive');
+    const categoryParam = urlParamsNews.get('category');
+
+    if (archiveParam) {
+      currentFilter = { type: 'archive', value: archiveParam };
+      currentPage = 1;
+      updateNewsDisplay();
+    } else if (categoryParam) {
+      currentFilter = { type: 'category', value: categoryParam };
+      currentPage = 1;
+      updateNewsDisplay();
+    }
+    
   }
 
   
