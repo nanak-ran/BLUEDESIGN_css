@@ -607,7 +607,7 @@ header.open .toggle_btn span:nth-child(3) {
 }
 .sub-fv__title-box {
   background-color: #fff;
-  width: 31.25rem;
+  width: 25rem;
   height: 12.5rem;
   justify-content: center;
   border-radius: 6.25rem;
@@ -616,33 +616,49 @@ header.open .toggle_btn span:nth-child(3) {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  box-shadow: -8px 8px 0px 0px #4285D2;
 }
 @media screen and (max-width: 767px) {
   .sub-fv__title-box {
-    width: 18.75rem;
+    width: 17rem;
     height: 9.375rem;
+    box-shadow: -5px 5px 0px 0px #4285D2;
   }
 }
 .sub-fv__en {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: rgba(66, 133, 210, 0.2);
+  color: #333333;
   font-family: "Catamaran", sans-serif;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.2em;
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+.sub-fv__en::after {
+  content: "";
+  position: absolute;
+  bottom: -0.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: rgba(66, 133, 210, 0.2);
 }
 @media screen and (max-width: 767px) {
   .sub-fv__en {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    letter-spacing: 0.15em;
   }
 }
 .sub-fv__ja {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.25rem;
+  font-weight: 500;
   color: #333333;
+  letter-spacing: 0.05em;
 }
 @media screen and (max-width: 767px) {
   .sub-fv__ja {
-    font-size: 1.5rem;
+    font-size: 1.625rem;
   }
 }
 .sub-fv__breadcrumb {

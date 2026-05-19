@@ -45,7 +45,7 @@
 
   &__title-box {
     background-color: #fff;
-    width: 31.25rem;
+    width: 25rem;
     height: 12.5rem;
     justify-content: center;
     border-radius: 6.25rem;
@@ -55,33 +55,56 @@
     align-items: center;
     gap: 0.5rem;
 
+    
+    box-shadow: 
+      -8px 8px 0px 0px #4285D2;
+      // -10px 10px 0px 0px $color-accent; 
+
     @include tab {
-      width: 18.75rem;
+      width: 17rem;
       height: 9.375rem;
+      
+      box-shadow:
+        -5px 5px 0px 0px #4285D2;
+        // -6px 6px 0px 0px $color-accent;  
     }
   }
 
-
-  &__en {
-    font-size: 1.5rem; 
-    font-weight: $weight-bold;
-    color: $color-sub;
-    font-family: $font-accent;
-    letter-spacing: 0.05em;
-
-    @include tab {
-      font-size: 1.25rem;
-    }
-  }
-
-  
-  &__ja {
-    font-size: 2rem; 
+ &__en {
+    font-size: 1.25rem; 
     font-weight: $weight-bold;
     color: $color-text;
+    font-family: $font-accent;
+    letter-spacing: 0.2em; 
+    position: relative;
+    margin-bottom: 0.8rem; 
+
+    
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -0.4rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px; 
+      height: 2px; 
+      background-color: $color-sub;
+    }
 
     @include tab {
-      font-size: 1.5rem;
+      font-size: 1rem;
+      letter-spacing: 0.15em;
+    }
+  }
+  
+  &__ja {
+    font-size: 2.25rem; 
+    font-weight: $weight-medium;
+    color: $color-text;
+    letter-spacing: 0.05em; 
+
+    @include tab {
+      font-size: 1.625rem;
     }
   }
 
