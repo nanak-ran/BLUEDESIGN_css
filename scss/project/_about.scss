@@ -57,16 +57,16 @@
 
     
     box-shadow: 
-      -8px 8px 0px 0px #4285D2;
-      // -10px 10px 0px 0px $color-accent; 
+      8px 8px 0px 0px #4285D2,
+      -8px 8px 0px 0px $color-accent; 
 
     @include tab {
       width: 17rem;
       height: 9.375rem;
       
       box-shadow:
-        -5px 5px 0px 0px #4285D2;
-        // -6px 6px 0px 0px $color-accent;  
+        5px 5px 0px 0px #4285D2,
+        -5px 5px 0px 0px $color-accent;  
     }
   }
 

@@ -7,7 +7,7 @@ $(function () {
     });
   }, 1500);
 
-  //   ハンバーガー
+  //    ハンバーガー
   $(".toggle_btn").on("click", function () {
     $("header").toggleClass("open");
   });
@@ -35,8 +35,18 @@ $(function () {
   // アコーディオン
   $('.service-detail__faq-a').hide();
   $('.service-detail__faq-q').on('click', function () {
-    $(this).next('.service-detail__faq-a').slideToggle(300);
-    $(this).toggleClass('is-active');
+    const $content = $(this).next('.service-detail__faq-a');
+
+    if ($content.is(':hidden')) {
+      $('.service-detail__faq-a').not($content).slideUp(300);
+      $('.service-detail__faq-q').not(this).removeClass('is-active');
+
+      $content.slideDown(300);
+      $(this).addClass('is-active');
+    } else {
+      $content.slideUp(300);
+      $(this).removeClass('is-active');
+    }
   });
 
   // news

@@ -105,7 +105,7 @@ html {
 }
 
 body {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Catamaran", sans-serif, "Noto Sans JP", sans-serif;
   color: #333333;
   line-height: 1.8;
   letter-spacing: 1px;
@@ -616,13 +616,13 @@ header.open .toggle_btn span:nth-child(3) {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: -8px 8px 0px 0px #4285D2;
+  box-shadow: 8px 8px 0px 0px #4285D2, -8px 8px 0px 0px #D68518;
 }
 @media screen and (max-width: 767px) {
   .sub-fv__title-box {
     width: 17rem;
     height: 9.375rem;
-    box-shadow: -5px 5px 0px 0px #4285D2;
+    box-shadow: 5px 5px 0px 0px #4285D2, -5px 5px 0px 0px #D68518;
   }
 }
 .sub-fv__en {

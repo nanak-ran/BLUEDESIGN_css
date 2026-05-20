@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: $font-main;
+  font-family: $font-accent, $font-main;
   color: $color-text;
   line-height: 1.8;
   letter-spacing: 1px;
